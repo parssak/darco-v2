@@ -3,11 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import DarcoProvider from './DarcoContext';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <DarcoProvider>
     <App />
-  </React.StrictMode>,
+  </DarcoProvider>,
   document.getElementById('root')
 );
 

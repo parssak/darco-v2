@@ -1,7 +1,7 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import styled from "styled-components";
 import { Title } from "./styles";
-import DarcoProvider from './DarcoContext';
+import DarcoProvider, { ReducerTypes, useDarco } from './DarcoContext';
 import useResizeObserver from "@react-hook/resize-observer";
 import StatusPanel from './components/StatusPanel';
 import SettingsPanel from './components/SettingsPanel';
@@ -41,10 +41,15 @@ const useSize = (target) => {
 }
 function App() {
   const target = useRef(null)
-  // eslint-disable-next-line no-unused-vars
   const size = useSize(target)
+  const { state, dispatch } = useDarco()
+  const [pdfName, setPdfName] = useState('');
+  window.recieveDataFromSwift = async (baseData, fileName) => {
+    alert(fileName);
+    window.webkit.messageHandlers.jsError.postMessage("Entered function");
+  }
+
   return (
-    <DarcoProvider>
       <AppContainer ref={target}>
         <svg width="100vw" height="100vh" viewBox="0 0 100vw 100vh" fill="none" xmlns="http://www.w3.org/2000/svg" className="bg">
           <rect width="100vw" height="100vh" fill="url(#paint0_radial)" />
@@ -60,12 +65,28 @@ function App() {
             </radialGradient>
           </defs>
         </svg>
-        <Title>Darco</Title>
+        <Title>Darco {pdfName}</Title>
         <StatusPanel />
-        <PreviewPanel width={200} height={500} />
+        <input id="file-upload" type="file"
+          onChange={async (evt) => {
+            const files = evt.target.files;
+            if (files.length) {
+              // Picked a file.
+              console.log('picked a file')
+              if (files) {
+                console.log(files[0].toString(), files[0],);
+              }
+              console.log('got files', files, files[0], files[0].name, files[0].size)
+              // setPdfName(files[0].name.substring(0, files[0].name.lastIndexOf('.')))
+              setPdfName(files[0].toString())
+              dispatch({ type: ReducerTypes.Idle, data: files[0] })
+            }
+          }}
+          accept="application/pdf"
+        />
+        <PreviewPanel width={size?.width} height={size?.height} />
         <SettingsPanel />
       </AppContainer>
-    </DarcoProvider>
   );
 }
 
