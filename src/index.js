@@ -5,6 +5,9 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import DarcoProvider from './DarcoContext';
 
+import { pdfjs } from 'react-pdf';
+pdfjs.GlobalWorkerOptions.workerSrc = `pdf.worker.js`;
+console.log(pdfjs.version);
 ReactDOM.render(
   <DarcoProvider>
     <App />

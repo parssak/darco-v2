@@ -18,6 +18,7 @@ html {
   color: rgba(239, 239, 244, 1);
   /* overflow-y: hidden; */
   background-color: rgb(136, 81, 14);
+  background: #000;
 }
 
 @media only screen and (max-width: 1000px) {

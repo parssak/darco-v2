@@ -7,6 +7,9 @@ import StatusPanel from './components/StatusPanel';
 import SettingsPanel from './components/SettingsPanel';
 import PreviewPanel from './components/PreviewPanel';
 
+
+window.app = this;
+
 const AppContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
@@ -39,6 +42,27 @@ const useSize = (target) => {
   useResizeObserver(target, (entry) => setSize(entry.contentRect))
   return size
 }
+
+let originalBlob = "";
+
+/**
+ *  Helper function that gets the dataURL from a File object
+ * @param file
+ */
+function getDataUrlFromFile(file) {
+  console.log(file)
+  return new Promise(resolve => {
+    const reader = new FileReader();
+    reader.addEventListener('load', function () {
+      // @ts-ignore
+      originalBlob = reader.result.slice(28);
+      console.log("Finito.");
+      resolve(reader.result);
+    }, false);
+    reader.readAsDataURL(file);
+  });
+}
+
 function App() {
   const target = useRef(null)
   const size = useSize(target)
@@ -65,25 +89,8 @@ function App() {
             </radialGradient>
           </defs>
         </svg>
-        <Title>Darco {pdfName}</Title>
+      <Title>Darco {pdfName} {state.step}</Title>
         <StatusPanel />
-        <input id="file-upload" type="file"
-          onChange={async (evt) => {
-            const files = evt.target.files;
-            if (files.length) {
-              // Picked a file.
-              console.log('picked a file')
-              if (files) {
-                console.log(files[0].toString(), files[0],);
-              }
-              console.log('got files', files, files[0], files[0].name, files[0].size)
-              // setPdfName(files[0].name.substring(0, files[0].name.lastIndexOf('.')))
-              setPdfName(files[0].toString())
-              dispatch({ type: ReducerTypes.Idle, data: files[0] })
-            }
-          }}
-          accept="application/pdf"
-        />
         <PreviewPanel width={size?.width} height={size?.height} />
         <SettingsPanel />
       </AppContainer>
@@ -91,3 +98,5 @@ function App() {
 }
 
 export default App;
+
+

@@ -6,7 +6,6 @@ import invertImage from '../helpers/invertImage';
 import LoadingModal from './LoadingModal'
 import PDFBuilder from './PDFBuilder';
 
-
 const Preview = styled.div`
     grid-area: preview;
     display: flex;
