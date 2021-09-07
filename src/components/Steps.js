@@ -34,9 +34,9 @@ const Steps = () => {
     
     const onFileChange = evt => {
         const files = evt.target.files;
-        if (files.length) {
-            alert(files[0].name.substring(0, files[0].name.lastIndexOf('.')))
-        }
+        // if (files.length) {
+        //     alert(files[0].name.substring(0, files[0].name.lastIndexOf('.')))
+        // }
         console.log(files[0]);
         dispatch({ type: ReducerTypes.Idle, data: files[0] })
     }
