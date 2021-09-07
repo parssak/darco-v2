@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/browser-engine/static/css/main.c02bbc23.chunk.css",
+    "main.js": "/browser-engine/static/js/main.8bf277fc.chunk.js",
+    "main.js.map": "/browser-engine/static/js/main.8bf277fc.chunk.js.map",
+    "runtime-main.js": "/browser-engine/static/js/runtime-main.ab7e58ea.js",
+    "runtime-main.js.map": "/browser-engine/static/js/runtime-main.ab7e58ea.js.map",
+    "static/js/2.1655e635.chunk.js": "/browser-engine/static/js/2.1655e635.chunk.js",
+    "static/js/2.1655e635.chunk.js.map": "/browser-engine/static/js/2.1655e635.chunk.js.map",
+    "static/js/3.2c5346c4.chunk.js": "/browser-engine/static/js/3.2c5346c4.chunk.js",
+    "static/js/3.2c5346c4.chunk.js.map": "/browser-engine/static/js/3.2c5346c4.chunk.js.map",
+    "static/js/4.53b58b3b.chunk.js": "/browser-engine/static/js/4.53b58b3b.chunk.js",
+    "static/js/4.53b58b3b.chunk.js.map": "/browser-engine/static/js/4.53b58b3b.chunk.js.map",
+    "static/js/5.da083466.chunk.js": "/browser-engine/static/js/5.da083466.chunk.js",
+    "static/js/5.da083466.chunk.js.map": "/browser-engine/static/js/5.da083466.chunk.js.map",
+    "static/js/6.7f14b78b.chunk.js": "/browser-engine/static/js/6.7f14b78b.chunk.js",
+    "static/js/6.7f14b78b.chunk.js.map": "/browser-engine/static/js/6.7f14b78b.chunk.js.map",
+    "caf53ed8c01c7c22be3e969781f0cc80.js": "/browser-engine/caf53ed8c01c7c22be3e969781f0cc80.js",
+    "caf53ed8c01c7c22be3e969781f0cc80.js.LICENSE.txt": "/browser-engine/caf53ed8c01c7c22be3e969781f0cc80.js.LICENSE.txt",
+    "index.html": "/browser-engine/index.html",
+    "static/css/main.c02bbc23.chunk.css.map": "/browser-engine/static/css/main.c02bbc23.chunk.css.map",
+    "static/js/2.1655e635.chunk.js.LICENSE.txt": "/browser-engine/static/js/2.1655e635.chunk.js.LICENSE.txt",
+    "static/js/3.2c5346c4.chunk.js.LICENSE.txt": "/browser-engine/static/js/3.2c5346c4.chunk.js.LICENSE.txt",
+    "static/js/4.53b58b3b.chunk.js.LICENSE.txt": "/browser-engine/static/js/4.53b58b3b.chunk.js.LICENSE.txt",
+    "static/js/5.da083466.chunk.js.LICENSE.txt": "/browser-engine/static/js/5.da083466.chunk.js.LICENSE.txt",
+    "static/media/darkmode.adfd070b.svg": "/browser-engine/static/media/darkmode.adfd070b.svg",
+    "static/media/download.f96d8e9e.svg": "/browser-engine/static/media/download.f96d8e9e.svg",
+    "static/media/page.10b16866.svg": "/browser-engine/static/media/page.10b16866.svg",
+    "static/media/share.bd919f0e.svg": "/browser-engine/static/media/share.bd919f0e.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ab7e58ea.js",
+    "static/js/3.2c5346c4.chunk.js",
+    "static/css/main.c02bbc23.chunk.css",
+    "static/js/main.8bf277fc.chunk.js"
+  ]
+}
