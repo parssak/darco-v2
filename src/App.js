@@ -27,7 +27,7 @@ const AppContainer = styled.div`
     "status status";
   }
   padding: 4vw;
-  height: 100vh;
+  height: 90vh;
   width: 100vw;
   /* background-color: white; */
 `;
@@ -89,7 +89,7 @@ function App() {
             </radialGradient>
           </defs>
         </svg>
-      <Title>Darco {pdfName} {state.step}</Title>
+      <Title>Darco</Title>
         <StatusPanel />
         <PreviewPanel width={size?.width} height={size?.height} />
         <SettingsPanel />

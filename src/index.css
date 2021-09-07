@@ -7,16 +7,15 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* overflow-y: hidden; */
-  /* position: fixed;
+  overflow-y: hidden;
+  position: fixed;
   width: 100vw;
-  height: 100vh; */
+  height: 90vh;
 }
 
 html {
   font-size: 100%;
   color: rgba(239, 239, 244, 1);
-  /* overflow-y: hidden; */
   background-color: rgb(136, 81, 14);
   background: #000;
 }
@@ -24,7 +23,6 @@ html {
 @media only screen and (max-width: 1000px) {
   html {
     font-size: 90%;
-    /* color: red; */
   }
 }
 
@@ -97,8 +95,9 @@ h4 {
 
 .bg {
   position: fixed;
-  top: 0;
+  top: -20px;
   right: 0;
   pointer-events: none;
   user-select: none;
+  overflow: visible;
 }

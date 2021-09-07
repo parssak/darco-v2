@@ -49,6 +49,7 @@ const PreviewPanel = ({ width, height }) => {
     const storeCanvasRef = (canvasEl, index) => children[index] = canvasEl
     
     const buildPDF = async () => {
+        console.log('called build pdf')
         isConverting = true;
         await PDFBuilder(images, state);
         dispatch({ type: ReducerTypes.ImagesConverted, images: images });
@@ -70,6 +71,7 @@ const PreviewPanel = ({ width, height }) => {
         const index = e._pageIndex;
         invertImage(children[index]?.toDataURL(), children[index], state.options.theme, state.options.quality).then(
             e => {
+                console.log('inverted image')
                 images[index] = e;
                 if (images.length === numPages) 
                     handleConvert();
