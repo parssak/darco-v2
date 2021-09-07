@@ -11,6 +11,7 @@ const ThemeOptionContainer = styled.div`
       flex-grow: 0.5;
       border-radius: 8.91px;
       width: 50%;
+      cursor: pointer;
       & > * {
           /* height: 100%; */
           padding: 1rem;

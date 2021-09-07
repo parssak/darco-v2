@@ -16,6 +16,7 @@ export const Title = styled.h1`
 export const Button = styled.button`
     all: unset;
     background: ${accent};
+    cursor: pointer;
     letter-spacing: -0.04rem;
     padding: 0.7rem 7rem;
     border-radius: 0.5rem;

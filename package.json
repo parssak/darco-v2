@@ -2,7 +2,7 @@
   "name": "react-swift-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://parssak.github.io/browser-engine",
+  "homepage": "https://parssak.github.io/darco-v2",
   "dependencies": {
     "@react-hook/resize-observer": "^1.2.0",
     "@testing-library/jest-dom": "^5.11.4",

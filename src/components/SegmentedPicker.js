@@ -15,6 +15,7 @@ const PickerContainer = styled.div`
 const OptionContainer = styled.div`
     display: grid;
     place-items: center;
+    cursor: pointer;
     flex-grow: 1;
     padding: 0.7rem;
     & > * {
